@@ -1,0 +1,54 @@
+﻿<Window x:Class="TrySomething.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TrySomething"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="180" Width="950" 
+       
+        AllowsTransparency="True" WindowStyle="None"
+        BorderBrush="Blue"
+        BorderThickness="10" Opacity="0.5"
+        >
+    
+    <Grid Name="MainGrid">
+
+        <DockPanel>
+            <Grid Name="TitleBarGrid" 
+                  Height="50" DockPanel.Dock="Top"
+                  MouseDown="TitleBarGrid_MouseDown"
+                  Background="Blue">
+
+                <StackPanel Orientation="Horizontal">
+                    <RepeatButton Content="+ X" FontSize="20" Width="50"
+                            Click="XPlusButton_Click"/>
+                    <RepeatButton Content="- X" FontSize="20" Width="50"
+                            Click="XMinusButton_Click"/>
+                    <RepeatButton Content="+ Y" FontSize="20" Width="50"
+                            Click="YPlusButton_Click"/>
+                    <RepeatButton Content="- Y" FontSize="20" Width="50"
+                            Click="YMinusButton_Click"/>
+
+                    <Button Content="Capture" FontSize="20"
+                            Click="CaptureButton_Click"/>
+
+                    <Button Content="Stop" FontSize="20"
+                            Click="StopButton_Click"/>
+
+                </StackPanel>
+                
+                <Button Content="X" 
+                        FontSize="20" Width="50"
+                        HorizontalAlignment="Right"
+                        Click="CloseButton_Click"/>
+                
+            </Grid>
+            
+            <Grid Name="ContentGrid"/>
+
+        </DockPanel>
+        
+
+    </Grid>
+</Window>
